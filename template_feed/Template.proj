@@ -34,8 +34,11 @@
   </Target>
   
   <Target Name="Test">
+    <PropertyGroup>
+      <CurrentDate>$([System.DateTime]::Now.ToString(yyyy-MM-dd_hh_mm_ss))</CurrentDate>
+    </PropertyGroup>
     <Exec 
-         Command="dotnet test --logger &quot;trx&quot; --results-directory &quot;$(ArtifactsFolder)&quot;"
+         Command="dotnet test --logger &quot;trx;LogFileName=$(TestFolder)$(USERNAME)_$(COMPUTERNAME)_$(CurrentDate).trx&quot;"
          WorkingDirectory="..\tools\ProjectTestRunner" />
   </Target>
 </Project>
