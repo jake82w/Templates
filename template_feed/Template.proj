@@ -38,8 +38,9 @@
       <CurrentDate>$([System.DateTime]::Now.ToString(yyyy-MM-dd_hh_mm_ss))</CurrentDate>
     </PropertyGroup>
     <MSBuild Targets="Restore" Projects="..\tools\ProjectTestRunner\ProjectTestRunner.csproj" />
+    <Message Text="Running dotnet test from '$(DOTNET_INSTALL_DIR)'" />
     <Exec 
-         Command="dotnet test --logger &quot;trx;LogFileName=$(TestFolder)$(USERNAME)_$(COMPUTERNAME)_$(CurrentDate).trx&quot;"
+         Command="$(DOTNET_INSTALL_DIR)dotnet.exe test --logger &quot;trx;LogFileName=$(TestFolder)$(USERNAME)_$(COMPUTERNAME)_$(CurrentDate).trx&quot;"
          WorkingDirectory="..\tools\ProjectTestRunner" />
   </Target>
 </Project>
