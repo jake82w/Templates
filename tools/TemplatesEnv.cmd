@@ -6,18 +6,6 @@ if defined ProgramFiles(x86) (
     set "TemplatesProgramFiles=%ProgramFiles%"
 )
 
-if not defined DNX_PACKAGES (
-    set DNX_PACKAGES=%~dp0\..\packages
-)
-
-if not defined DOTNET_INSTALL_DIR (
-    set DOTNET_INSTALL_DIR=%LocalAppData%\Microsoft\dotnet\
-)
-
-if not defined DOTNET_VERSION (
-    set DOTNET_VERSION=2.0.1-servicing-006924
-)
-
 if exist "%TemplatesProgramFiles%\Microsoft Visual Studio\Preview\MSBuild\15.0\Bin\MSBuild.exe" (
     set "TemplatesVSVersion=15.0"
     set TemplatesMSBuildPath="%TemplatesProgramFiles%\Microsoft Visual Studio\Preview\MSBuild\15.0\Bin"
