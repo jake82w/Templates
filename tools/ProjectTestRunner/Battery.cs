@@ -45,6 +45,8 @@ namespace ProjectTestRunner
                 Creator = "new";
             }
 
+            Proc.Run("dotnet", $"--version").WaitForExit();
+
             Proc.Run("dotnet", $"{Creator} --debug:reinit").WaitForExit();
             Proc.Run("dotnet", $"{Creator}").WaitForExit();
 
