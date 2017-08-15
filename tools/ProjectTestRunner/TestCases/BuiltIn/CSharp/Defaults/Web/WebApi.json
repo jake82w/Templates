@@ -4,8 +4,8 @@
   "variations": [
     {
       "id": "fullFramework",
-      "name": "WebAPI (C#, net462 framework, default auth)",
-      "create": "api --target-framework-override net462 --no-restore"
+      "name": "WebAPI (C#, net461 framework, default auth)",
+      "create": "api --target-framework-override net461 --no-restore"
     }
   ],
   "tasks": [
@@ -36,7 +36,7 @@
       "name": "RunApp",
       "variation": "fullFramework",
       "handler": "execute",
-      "command": "bin/Debug/net462/%targetPathName%.exe",
+      "command": "bin/Debug/net461/%targetPathName%.exe",
       "noExit": true,
       "exitTimeout": 5000
     },
