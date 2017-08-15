@@ -18,9 +18,9 @@ if not defined DOTNET_VERSION (
     set DOTNET_VERSION=2.0.1-servicing-006924
 )
 
-if exist "%TemplatesProgramFiles%\Microsoft Visual Studio\VS15Preview\MSBuild\15.0\Bin\MSBuild.exe" (
+if exist "%TemplatesProgramFiles%\Microsoft Visual Studio\Preview\MSBuild\15.0\Bin\MSBuild.exe" (
     set "TemplatesVSVersion=15.0"
-    set TemplatesMSBuildPath="%TemplatesProgramFiles%\Microsoft Visual Studio\VS15Preview\MSBuild\15.0\Bin"
+    set TemplatesMSBuildPath="%TemplatesProgramFiles%\Microsoft Visual Studio\Preview\MSBuild\15.0\Bin"
 ) else (
     set "TemplatesVSVersion=14.0"
     set TemplatesMSBuildPath="%TemplatesProgramFiles%\MSBuild\14.0\Bin"
