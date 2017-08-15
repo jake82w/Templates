@@ -12,7 +12,7 @@
     {
       "handler": "execute",
       "command": "dotnet",
-      "args": "build",
+      "args": "build -c Debug",
       "noExit": false,
       "exitCode": 0
     }
