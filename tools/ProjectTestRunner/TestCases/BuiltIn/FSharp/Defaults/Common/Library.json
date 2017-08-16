@@ -1,6 +1,6 @@
 ﻿{
   "create": "classlib --language f# --no-restore",
-  "name": "Console (default framework)",
+  "name": "ClassLibrary (F#, default framework)",
   "tasks": [
     {
       "handler": "execute",

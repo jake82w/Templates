@@ -1,6 +1,6 @@
 ﻿{
   "create": "classlib --no-restore",
-  "name": "Console (default framework)",
+  "name": "ClassLibrary (C#, default framework)",
   "tasks": [
     {
       "handler": "execute",

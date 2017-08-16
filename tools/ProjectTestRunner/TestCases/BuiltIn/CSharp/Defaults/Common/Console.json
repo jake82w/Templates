@@ -1,6 +1,6 @@
 ﻿{
   "create": "console --no-restore",
-  "name": "Console (default framework)",
+  "name": "Console (C#, default framework)",
   "tasks": [
     {
       "handler": "execute",
